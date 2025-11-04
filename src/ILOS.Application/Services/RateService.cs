@@ -34,32 +34,42 @@ namespace ILOS.Application.Services
             return dtos;
         }
 
-        public async Task<decimal> CalculateCostAsync(SimulationRequestDto simulationRequest)
+        public async Task<SimulationResponseDto?> CalculateCostAsync(SimulationRequestDto simulationRequest)
         {
-            // 1. Fetch the specific rate config from Supabase
+
             var response = await _supabase
                 .From<RateConfiguration>()
-                .Where(model => model.RateName == simulationRequest.RateName) 
+                .Where(model => model.RateName == simulationRequest.RateName)
                 .Get();
 
-            // 2. Get the *first* matching result
+
             var rateConfig = response.Models.FirstOrDefault();
 
-            // 3. Check if we found it. If not, throw an error.
+
             if (rateConfig == null)
             {
-                // We'll just return -1 for now to signal an error
-                // In a real app, we'd throw an exception
-                return -1;
+
+
+                return null;
             }
 
-            // 4. Perform the calculation based on your proposal's logic
+
             decimal weightCost = simulationRequest.Weight * rateConfig.RatePerPound;
             decimal distanceCost = simulationRequest.Distance * rateConfig.RatePerMile;
 
             decimal totalCost = rateConfig.BaseRate + weightCost + distanceCost;
 
-            return totalCost;
+            var responseDto = new SimulationResponseDto
+            {
+                RateName = rateConfig.RateName,
+                BaseRate = rateConfig.BaseRate,
+                WeightCost = weightCost,
+                DistanceCost = distanceCost,
+                TotalCost = totalCost
+            };
+
+
+            return responseDto;
         }
 
 

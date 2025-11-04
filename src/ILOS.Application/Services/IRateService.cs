@@ -7,6 +7,6 @@ namespace ILOS.Application.Services
     public interface IRateService
     {
         Task<IEnumerable<RateConfigurationDto>> GetRateConfigurationsAsync();
-        Task<decimal> CalculateCostAsync(SimulationRequestDto simulationRequest);
+        Task<SimulationResponseDto?> CalculateCostAsync(SimulationRequestDto simulationRequest);
     }
 }

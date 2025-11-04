@@ -29,14 +29,14 @@ namespace ILOS.API.Controllers
         public async Task<ActionResult> SimulateCost([FromBody] SimulationRequestDto request)
         {
             var cost = await _rateService.CalculateCostAsync(request);
-            if (cost == -1)
+            if (cost == null)
             {
 
                 return NotFound(new { error = $"Rate name '{request.RateName}' not found." });
             }
 
 
-            return Ok(new { totalCost = cost });
+            return Ok(cost);
         }
     }
 }

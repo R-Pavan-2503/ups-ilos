@@ -2,39 +2,57 @@ using Supabase;
 using ILOS.Application.Models;
 using ILOS.Application.Services;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
-// --- Add this code ---
+// ====================================================
+// ✅ 1. Configure CORS (for local frontend access)
+// ====================================================
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
-// 1. Get the URL and Key from appsettings.json
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
+    {
+        policy.WithOrigins("http://localhost:5173") // React frontend
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+// ====================================================
+// ✅ 2. Configure Supabase client
+// ====================================================
 var supabaseUrl = builder.Configuration["Supabase:Url"]!;
 var supabaseKey = builder.Configuration["Supabase:ServiceKey"]!;
 
-// 2. Register the Supabase client as a singleton
 builder.Services.AddSingleton<Supabase.Client>(provider =>
     new Supabase.Client(
         supabaseUrl,
         supabaseKey,
         new SupabaseOptions
         {
-            AutoConnectRealtime = true // Good to have for later
+            AutoConnectRealtime = true
         }
     )
 );
-// --- End of code to add ---
 
+// ====================================================
+// ✅ 3. Register application services
+// ====================================================
 builder.Services.AddScoped<IRateService, RateService>();
 
-builder.Services.AddControllers(); // This line was already there
-
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+// ====================================================
+// ✅ 4. Default ASP.NET service setup
+// ====================================================
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// ====================================================
+// ✅ 5. Build and configure middleware pipeline
+// ====================================================
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -42,5 +60,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Apply CORS before controller routing
+app.UseCors(MyAllowSpecificOrigins);
+
 app.MapControllers();
+
 app.Run();
