@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ILOS.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e70fc2fa7f8a7d7896e47802a032fb04f6af06a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a62b9c15af7f1d9cbf459354f0e0a3dcaefe2ecc")]
 [assembly: System.Reflection.AssemblyProductAttribute("ILOS.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ILOS.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

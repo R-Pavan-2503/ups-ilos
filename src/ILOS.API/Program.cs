@@ -1,17 +1,27 @@
-// --- Add these using statements at the top ---
-using Microsoft.EntityFrameworkCore;
-using ILOS.Infrastructure.Persistence;
+using Supabase;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// --- Add services to the container ---
+// --- Add this code ---
 
-// 1. Add services for API controllers
-builder.Services.AddControllers();
+// 1. Get the URL and Key from appsettings.json
+var supabaseUrl = builder.Configuration["Supabase:Url"]!;
+var supabaseKey = builder.Configuration["Supabase:ServiceKey"]!;
 
-// 2. Register our ApplicationDbContext
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// 2. Register the Supabase client as a singleton
+builder.Services.AddSingleton<Supabase.Client>(provider =>
+    new Supabase.Client(
+        supabaseUrl,
+        supabaseKey,
+        new SupabaseOptions
+        {
+            AutoConnectRealtime = true // Good to have for later
+        }
+    )
+);
+// --- End of code to add ---
+
+builder.Services.AddControllers(); // This line was already there
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddEndpointsApiExplorer();
@@ -27,8 +37,5 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-// 3. This tells the app to use our API controllers
 app.MapControllers();
-
 app.Run();
