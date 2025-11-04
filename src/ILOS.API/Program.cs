@@ -1,4 +1,7 @@
 using Supabase;
+using ILOS.Application.Models;
+using ILOS.Application.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +23,8 @@ builder.Services.AddSingleton<Supabase.Client>(provider =>
     )
 );
 // --- End of code to add ---
+
+builder.Services.AddScoped<IRateService, RateService>();
 
 builder.Services.AddControllers(); // This line was already there
 

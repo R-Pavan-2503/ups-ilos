@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v9.0": {
       "ILOS.Infrastructure/1.0.0": {
         "dependencies": {
-          "postgrest-csharp": "3.5.1",
           "supabase-csharp": "0.16.2"
         },
         "runtime": {

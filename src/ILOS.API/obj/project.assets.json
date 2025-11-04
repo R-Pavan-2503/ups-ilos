@@ -385,11 +385,24 @@
           }
         }
       },
+      "ILOS.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ILOS.Infrastructure": "1.0.0",
+          "supabase-csharp": "0.16.2"
+        },
+        "compile": {
+          "bin/placeholder/ILOS.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ILOS.Application.dll": {}
+        }
+      },
       "ILOS.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "postgrest-csharp": "3.5.1",
           "supabase-csharp": "0.16.2"
         },
         "compile": {
@@ -1100,6 +1113,11 @@
         "websocket.client.nuspec"
       ]
     },
+    "ILOS.Application/1.0.0": {
+      "type": "project",
+      "path": "../ILOS.Application/ILOS.Application.csproj",
+      "msbuildProject": "../ILOS.Application/ILOS.Application.csproj"
+    },
     "ILOS.Infrastructure/1.0.0": {
       "type": "project",
       "path": "../ILOS.Infrastructure/ILOS.Infrastructure.csproj",
@@ -1108,6 +1126,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "ILOS.Application >= 1.0.0",
       "ILOS.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.10",
       "Swashbuckle.AspNetCore >= 9.0.6"
@@ -1145,6 +1164,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "D:\\ups\\projects\\src\\ILOS.Application\\ILOS.Application.csproj": {
+              "projectPath": "D:\\ups\\projects\\src\\ILOS.Application\\ILOS.Application.csproj"
+            },
             "D:\\ups\\projects\\src\\ILOS.Infrastructure\\ILOS.Infrastructure.csproj": {
               "projectPath": "D:\\ups\\projects\\src\\ILOS.Infrastructure\\ILOS.Infrastructure.csproj"
             }
