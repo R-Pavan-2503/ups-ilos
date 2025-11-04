@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ILOS.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81af15bfd4e799ced08c91cd2429c7a7d578b4d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47fb1e3e2d68abf8dc904d1489e83d540a8df667")]
 [assembly: System.Reflection.AssemblyProductAttribute("ILOS.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ILOS.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
