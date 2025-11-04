@@ -624,7 +624,6 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "postgrest-csharp >= 3.5.1",
       "supabase-csharp >= 0.16.2"
     ]
   },
@@ -678,10 +677,6 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
-          "postgrest-csharp": {
-            "target": "Package",
-            "version": "[3.5.1, )"
-          },
           "supabase-csharp": {
             "target": "Package",
             "version": "[0.16.2, )"
