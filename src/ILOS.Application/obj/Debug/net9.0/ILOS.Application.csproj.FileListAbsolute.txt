@@ -1,0 +1,12 @@
+D:\ups\projects\src\ILOS.Application\bin\Debug\net9.0\ILOS.Application.deps.json
+D:\ups\projects\src\ILOS.Application\bin\Debug\net9.0\ILOS.Application.dll
+D:\ups\projects\src\ILOS.Application\bin\Debug\net9.0\ILOS.Application.pdb
+D:\ups\projects\src\ILOS.Application\obj\Debug\net9.0\ILOS.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\ups\projects\src\ILOS.Application\obj\Debug\net9.0\ILOS.Application.AssemblyInfoInputs.cache
+D:\ups\projects\src\ILOS.Application\obj\Debug\net9.0\ILOS.Application.AssemblyInfo.cs
+D:\ups\projects\src\ILOS.Application\obj\Debug\net9.0\ILOS.Application.csproj.CoreCompileInputs.cache
+D:\ups\projects\src\ILOS.Application\obj\Debug\net9.0\ILOS.Application.sourcelink.json
+D:\ups\projects\src\ILOS.Application\obj\Debug\net9.0\ILOS.Application.dll
+D:\ups\projects\src\ILOS.Application\obj\Debug\net9.0\refint\ILOS.Application.dll
+D:\ups\projects\src\ILOS.Application\obj\Debug\net9.0\ILOS.Application.pdb
+D:\ups\projects\src\ILOS.Application\obj\Debug\net9.0\ref\ILOS.Application.dll
