@@ -1,0 +1,15 @@
+D:\ups\projects\src\ILOS.Infrastructure\bin\Debug\net9.0\ILOS.Infrastructure.deps.json
+D:\ups\projects\src\ILOS.Infrastructure\bin\Debug\net9.0\ILOS.Infrastructure.runtimeconfig.json
+D:\ups\projects\src\ILOS.Infrastructure\bin\Debug\net9.0\ILOS.Infrastructure.dll
+D:\ups\projects\src\ILOS.Infrastructure\bin\Debug\net9.0\ILOS.Infrastructure.pdb
+D:\ups\projects\src\ILOS.Infrastructure\obj\Debug\net9.0\ILOS.Infrastructure.csproj.AssemblyReference.cache
+D:\ups\projects\src\ILOS.Infrastructure\obj\Debug\net9.0\ILOS.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\ups\projects\src\ILOS.Infrastructure\obj\Debug\net9.0\ILOS.Infrastructure.AssemblyInfoInputs.cache
+D:\ups\projects\src\ILOS.Infrastructure\obj\Debug\net9.0\ILOS.Infrastructure.AssemblyInfo.cs
+D:\ups\projects\src\ILOS.Infrastructure\obj\Debug\net9.0\ILOS.Infrastructure.csproj.CoreCompileInputs.cache
+D:\ups\projects\src\ILOS.Infrastructure\obj\Debug\net9.0\ILOS.Infrastructure.sourcelink.json
+D:\ups\projects\src\ILOS.Infrastructure\obj\Debug\net9.0\ILOS.Infrastructure.dll
+D:\ups\projects\src\ILOS.Infrastructure\obj\Debug\net9.0\refint\ILOS.Infrastructure.dll
+D:\ups\projects\src\ILOS.Infrastructure\obj\Debug\net9.0\ILOS.Infrastructure.pdb
+D:\ups\projects\src\ILOS.Infrastructure\obj\Debug\net9.0\ILOS.Infrastructure.genruntimeconfig.cache
+D:\ups\projects\src\ILOS.Infrastructure\obj\Debug\net9.0\ref\ILOS.Infrastructure.dll
